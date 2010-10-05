@@ -1,0 +1,47 @@
+# dml_rand_masthead v0.5
+# Returns a random masthead, given a category
+# Dan Lowe
+# http://tangledhelix.com/
+
+# ......................................................................
+# This is a plugin for Textpattern - http://textpattern.com/
+# To install: textpattern > admin > plugins
+# Paste the following text into the 'Install plugin' box:
+# ......................................................................
+
+YTo5OntzOjc6InZlcnNpb24iO3M6MzoiMC41IjtzOjY6ImF1dGhvciI7czo4OiJEYW4gTG93
+ZSI7czoxMDoiYXV0aG9yX3VyaSI7czoyNDoiaHR0cDovL3RhbmdsZWRoZWxpeC5jb20vIjtz
+OjExOiJkZXNjcmlwdGlvbiI7czo0MzoiUmV0dXJucyBhIHJhbmRvbSBtYXN0aGVhZCwgZ2l2
+ZW4gYSBjYXRlZ29yeSI7czo0OiJ0eXBlIjtpOjA7czo0OiJuYW1lIjtzOjE3OiJkbWxfcmFu
+ZF9tYXN0aGVhZCI7czo0OiJoZWxwIjtzOjYxOToiCjxwPjxzdHJvbmc+dHhwOmRtbF9yYW5k
+X21hc3RoZWFkPC9zdHJvbmc+PC9wPgoKPHA+VGhpcyBwbHVnaW4gcmV0dXJucyBhIHJhbmRv
+bSBtYXN0aGVhZCBpbWFnZSBmcm9tIGEgZ2l2ZW4gaW1hZ2UgY2F0ZWdvcnkuClVwbG9hZCB5
+b3VyIG1hc3RoZWFkcywgcHV0IHRoZW0gYWxsIGludG8gc29tZSBpbWFnZSBjYXRlZ29yeSwg
+dGhlbgpwdXQgdGhpcyBpbiB5b3VyIHBhZ2UgdGVtcGxhdGUgb3IgZm9ybSAoc3Vic3RpdHV0
+aW5nIHlvdXIgb3duIGNhdGVnb3J5Cm5hbWUpOjwvcD4KCjxwPjxjb2RlPiZsdDt0eHA6ZG1s
+X3JhbmRfbWFzdGhlYWQgY2F0ZWdvcnk9JnF1b3Q7c2l0ZS1tYXN0aGVhZCZxdW90OyZuYnNw
+Oy8mZ3Q7PC9jb2RlPjwvcD4KCjxwPkFjY2VwdHMgdGhlIDxjb2RlPmxpbmt0ZXh0PSZxdW90
+O2xhYmVsIHRleHQmcXVvdDs8L2NvZGU+IGF0dHJpYnV0ZSwKd2hpY2ggd2lsbCBiZSB1c2Vk
+IGFzIHRoZSBBTFQgYW5kIFRJVExFIHRhZyBmb3IgdGhlIG1hc3RoZWFkLjwvcD4KCjxwPkFj
+Y2VwdHMgdGhlIDxjb2RlPmNsYXNzPSZxdW90O2NsYXNzbmFtZSZxdW90OzwvY29kZT5hdHRy
+aWJ1dGUsCndoaWNoIGRlZmluZXMgYSBDU1MgY2xhc3MgZm9yIHRoZSBtYXN0aGVhZC48L3A+
+CiI7czo0OiJjb2RlIjtzOjk4MToiCmZ1bmN0aW9uIGRtbF9yYW5kX21hc3RoZWFkKCRhdHRz
+KQp7CiAgICBnbG9iYWwgJGltZ19kaXI7CgogICAgZXh0cmFjdChsQXR0cyhhcnJheSgKICAg
+ICAgICAnY2F0ZWdvcnknCT0+ICcnLAogICAgICAgICdsaW5rdGV4dCcJPT4gJ0dvIHRvIG1h
+aW4gcGFnZScsCgkJJ2NsYXNzJwkJPT4gJycsCiAgICApLCRhdHRzKSk7CgogICAgJHJzID0g
+c2FmZV9yb3dzX3N0YXJ0KAogICAgICAgICcqJywgJ3R4cF9pbWFnZScsICJjYXRlZ29yeT0n
+Ii5kb1NsYXNoKCRjYXRlZ29yeSkuIiciCiAgICApOwoKICAgIGlmICgkcnMpCiAgICB7CiAg
+ICAgICAgd2hpbGUgKCRhID0gbmV4dFJvdygkcnMpKQogICAgICAgIHsKICAgICAgICAgICAg
+ZXh0cmFjdCgkYSk7CiAgICAgICAgICAgICRvdXRbXSA9IGFycmF5KCBpZCA9PiAkaWQsIGgg
+PT4gJGgsIHcgPT4gJHcsIGV4dCA9PiAkZXh0ICk7CiAgICAgICAgfQoKICAgICAgICBpZiAo
+aXNfYXJyYXkoJG91dCkpCiAgICAgICAgewogICAgICAgICAgICBzcmFuZCgoZG91YmxlKW1p
+Y3JvdGltZSgpKjEwMDAwMDApOwogICAgICAgICAgICAkcmFuZHZhbCA9IHJhbmQoMCwoc2l6
+ZW9mKCRvdXQpLTEpKTsKICAgICAgICAgICAgJGltYWdlID0gJG91dFskcmFuZHZhbF07Cgog
+ICAgICAgICAgICByZXR1cm4gJzxhIGhyZWY9IicgLiBodSAuICciIHRpdGxlPSInLiRsaW5r
+dGV4dC4nIj4nCiAgICAgICAgICAgICAgICAgLiAnPGltZyBzcmM9IicgLiBodSAuICRpbWdf
+ZGlyIC4gJy8nCiAgICAgICAgICAgICAgICAgLiAkaW1hZ2VbJ2lkJ10uJGltYWdlWydleHQn
+XQogICAgICAgICAgICAgICAgIC4gJyIgd2lkdGg9IicuJGltYWdlWyd3J10uJyIgaGVpZ2h0
+PSInLiRpbWFnZVsnaCddCgkJCQkgLiAnIiBjbGFzcz0iJy4kY2xhc3MKICAgICAgICAgICAg
+ICAgICAuICciIGFsdD0iJy4kbGlua3RleHQuJyIgYm9yZGVyPSIwIiAvPjwvYT4nOwogICAg
+ICAgIH0KICAgIH0KCiAgICByZXR1cm4gJyc7Cn0KIjtzOjM6Im1kNSI7czozMjoiOGUyNDUw
+YmIzZTk2ZDMzODEyYzY2NTJiNjVjMjUxYWYiO30=
