@@ -7,21 +7,21 @@
 // file name. Uncomment and edit this line to override:
 # $plugin['name'] = 'abc_plugin';
 
-$plugin['version']     = '0.5';
-$plugin['author']      = 'Dan Lowe';
-$plugin['author_uri']  = 'http://tangledhelix.com/';
-$plugin['description'] = 'Returns a random masthead, given a category';
+$plugin[ 'version' ] = '0.5';
+$plugin[ 'author' ] = 'Dan Lowe';
+$plugin[ 'author_uri' ] = 'http://tangledhelix.com/archive/txp-dml-rand-masthead';
+$plugin[ 'description' ] = 'Returns a random masthead, given a category';
 
 // Plugin types:
 // 0 = regular plugin; loaded on the public web side only
 // 1 = admin plugin; loaded on both the public and admin side
 // 2 = library; loaded only when include_plugin() or require_plugin() is called
-$plugin['type'] = 0; 
+$plugin[ 'type' ] = 0; 
 
 
-@include_once('zem_tpl.php');
+@include_once( 'zem_tpl.php' );
 
-if (0) {
+if ( 0 ) {
 ?>
 # --- BEGIN PLUGIN HELP ---
 
@@ -46,40 +46,34 @@ which defines a CSS class for the masthead.</p>
 
 # --- BEGIN PLUGIN CODE ---
 
-function dml_rand_masthead($atts)
-{   
+function dml_rand_masthead( $atts ) {   
     global $img_dir;
 
-    extract(lAtts(array(
-        'category'	=> '',
-        'linktext'	=> 'Go to main page',
-		'class'		=> '',
-    ),$atts));
+    extract( lAtts( array(
+        'category' => '',
+        'linktext' => 'Go to main page',
+        'class' => '',
+    ) ,$atts ) );
         
-    $rs = safe_rows_start(
-        '*', 'txp_image', "category='".doSlash($category)."'"
-    );  
+    $rs = safe_rows_start( '*', 'txp_image', "category='".doSlash($category)."'" );
         
-    if ($rs)
-    {
-        while ($a = nextRow($rs))
-        {
-            extract($a);
+    if ( $rs ) {
+        while ( $a = nextRow( $rs ) ) {
+            extract( $a );
             $out[] = array( id => $id, h => $h, w => $w, ext => $ext );
         }   
 
-        if (is_array($out))
-        {
-            srand((double)microtime()*1000000);
-            $randval = rand(0,(sizeof($out)-1));
-            $image = $out[$randval];
+        if ( is_array( $out ) ) {
+            srand( (double)microtime() * 1000000 );
+            $randval = rand( 0, ( sizeof( $out ) - 1 ) );
+            $image = $out[ $randval ];
 
-            return '<a href="' . hu . '" title="'.$linktext.'">'
+            return '<a href="' . hu . '" title="' . $linktext. '">'
                  . '<img src="' . hu . $img_dir . '/'
-                 . $image['id'].$image['ext']
-                 . '" width="'.$image['w'].'" height="'.$image['h']
-				 . '" class="'.$class
-                 . '" alt="'.$linktext.'" border="0" /></a>';
+                 . $image[ 'id' ] . $image[ 'ext' ]
+                 . '" width="' . $image[ 'w' ] . '" height="' . $image[ 'h' ]
+                 . '" class="' . $class
+                 . '" alt="' . $linktext . '" border="0" /></a>';
         }        
     }   
 
