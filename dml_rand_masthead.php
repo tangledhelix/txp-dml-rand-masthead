@@ -47,37 +47,37 @@ which defines a CSS class for the masthead.</p>
 # --- BEGIN PLUGIN CODE ---
 
 function dml_rand_masthead($atts) {   
-    global $img_dir;
+	global $img_dir;
 
-    extract(lAtts(array(
-        'category' => '',
-        'linktext' => 'Go to main page',
-        'class' => '',
-    ) ,$atts));
-        
-    $rs = safe_rows_start('*', 'txp_image', "category='".doSlash($category)."'");
-        
-    if ($rs) {
-        while ($a = nextRow($rs)) {
-            extract($a);
-            $out[] = array(id => $id, h => $h, w => $w, ext => $ext);
-        }   
+	extract(lAtts(array(
+		'category' => '',
+		'linktext' => 'Go to main page',
+		'class' => '',
+	) ,$atts));
 
-        if (is_array($out)) {
-            srand((double)microtime() * 1000000);
-            $randval = rand(0, (sizeof($out) - 1));
-            $image = $out[$randval];
+	$rs = safe_rows_start('*', 'txp_image', "category='".doSlash($category)."'");
 
-            return '<a href="' . hu . '" title="' . $linktext. '">'
-                 . '<img src="' . hu . $img_dir . '/'
-                 . $image['id'] . $image['ext']
-                 . '" width="' . $image['w'] . '" height="' . $image['h']
-                 . '" class="' . $class
-                 . '" alt="' . $linktext . '" border="0" /></a>';
-        }        
-    }   
+	if ($rs) {
+		while ($a = nextRow($rs)) {
+			extract($a);
+			$out[] = array(id => $id, h => $h, w => $w, ext => $ext);
+		}   
 
-    return '';
+		if (is_array($out)) {
+			srand((double)microtime() * 1000000);
+			$randval = rand(0, (sizeof($out) - 1));
+			$image = $out[$randval];
+
+			return '<a href="' . hu . '" title="' . $linktext. '">'
+				. '<img src="' . hu . $img_dir . '/'
+				. $image['id'] . $image['ext']
+				. '" width="' . $image['w'] . '" height="' . $image['h']
+				. '" class="' . $class
+				. '" alt="' . $linktext . '" border="0" /></a>';
+		}        
+	}   
+
+	return '';
 }
 
 # --- END PLUGIN CODE ---
