@@ -7,9 +7,9 @@
 // file name. Uncomment and edit this line to override:
 # $plugin['name'] = 'abc_plugin';
 
-$plugin['version'] = '0.5';
-$plugin['author'] = 'Dan Lowe';
-$plugin['author_uri'] = 'http://tangledhelix.com/archive/txp-dml-rand-masthead';
+$plugin['version']     = '0.5';
+$plugin['author']      = 'Dan Lowe';
+$plugin['author_uri']  = 'http://tangledhelix.com/archive/txp-dml-rand-masthead';
 $plugin['description'] = 'Returns a random masthead, given a category';
 
 // Plugin types:
